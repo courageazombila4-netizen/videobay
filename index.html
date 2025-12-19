@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VideoBay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>VideoBay</h1>
+  </header>
+  <main>
+    <div class="player-wrap">
+      <video id="player" controls preload="metadata">
+        <source id="videoSource" src="videos/sample1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="controls">
+      <label class="btn" for="fileInput">Load local file</label>
+      <input id="fileInput" type="file" accept="video/*" style="display:none">
+      <button id="clearBtn" class="btn">Clear</button>
+    </div>
+
+    <p class="note">Place sample videos in the <code>videos/</code> folder (e.g. <code>videos/sample1.mp4</code>) and serve this folder via a local HTTP server.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
